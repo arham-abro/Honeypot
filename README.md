@@ -193,6 +193,4 @@ http://YOUR_EC2_IP:3000
 
 **Made with ☁️ on AWS · Built for Cloud Security Course**
 
-⭐ Star this repo if you found it useful!
-
 </div>

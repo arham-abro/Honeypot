@@ -26,7 +26,20 @@
 
 ## 📸 Screenshots
 
-> Add your dashboard screenshots in a `screenshots/` folder and they will appear here.
+### 🖥️ Live Attack Dashboard — 843 Events · 76 Unique Attackers
+![Dashboard](screenshots/dashboard.png)
+
+### ☁️ AWS EC2 Console — Instance Running
+![AWS](screenshots/aws-console.png)
+
+### 🔒 Security Group — All Honeypot Ports Open
+![Security Group](screenshots/security-group.png)
+
+### 📋 Raw Attack Log (Terminal)
+![Logs](screenshots/attacks-log.png)
+
+### 🌐 API Response — Live JSON Data
+![API](screenshots/api-response.png)
 
 ---
 

@@ -62,26 +62,26 @@ Within minutes of deployment, real bots and attackers from around the world bega
 
 ```
 Internet (Attackers & Bots)
-         │
-         ▼
-  [AWS Internet Gateway]
-         │
-         ▼
-  [EC2 t3.micro - Ubuntu 26.04]
-  ┌──────────────────────────────────┐
-  │  🎣 Honeypot Services (Python)  │
-  │  ├── Fake SSH    → Port 2222    │
-  │  ├── Fake HTTP   → Port 8080    │
-  │  └── Fake Telnet → Port 2323    │
-  │  📝 attacks.json (log file)     │
-  │  🐍 Flask API   → Port 5000     │
-  │  ⚛️  React Dashboard → Port 3000│
-  └──────────────────────────────────┘
-         │
-         ▼
-  [Your Browser — Live Dashboard]
+           │
+           ▼
+   [AWS Internet Gateway]
+           │
+           ▼
+   [EC2 t3.micro - Ubuntu 26.04]
+   ┌─────────────────────────────┐
+   │  Honeypot Services (Python) │
+   │  ├── Fake SSH  → Port 2222  │
+   │  ├── Fake HTTP → Port 8080  │
+   │  └── Fake Telnet → Port 2323│
+   │                             │
+   │  attacks.json (log file)    │
+   │  Flask API   → Port 5000    │
+   │  React Dashboard → Port 3000│
+   └─────────────────────────────┘
+           │
+           ▼
+   [Your Browser - Live Dashboard]
 ```
-
 ---
 
 ## 🛠️ Tech Stack
@@ -111,19 +111,18 @@ Emulates a Telnet login prompt. Captures username and password brute force attem
 ---
 
 ## 📁 Project Structure
+
+```
 Honeypot/
-
 ├── honeypot.py          # Core honeypot — fake SSH, HTTP, Telnet services
-
 ├── api.py               # Flask REST API serving attack data
-
 ├── start.sh             # One-command startup script
-
+├── .gitignore
+├── screenshots/         # Project screenshots
 └── honeypot-dashboard/
-
-└── src/
-
-└── App.js       # React dashboard UI
+    └── src/
+        └── App.js       # React dashboard UI
+```
 
 ---
 

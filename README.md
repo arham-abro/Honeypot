@@ -1,8 +1,6 @@
+![Header](https://capsule-render.vercel.app/api?type=waving&color=ef4444&height=200&section=header&text=🍯%20Cloud%20Honeypot&fontSize=50&fontColor=ffffff&animation=fadeIn&desc=Real-Time%20Attack%20Visualization%20on%20AWS%20EC2&descSize=20&descAlignY=75)
+
 <div align="center">
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=32&pause=1000&color=EF4444&center=true&vCenter=true&width=600&lines=🍯+Cloud+Honeypot;Real-Time+Attack+Visualization;Built+on+AWS+EC2" alt="Typing SVG" />
-
-<br/>
 
 ![AWS](https://img.shields.io/badge/AWS-EC2-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.14-3776AB?style=for-the-badge&logo=python&logoColor=white)
@@ -48,49 +46,28 @@ Within minutes of deployment, real bots and attackers from around the world bega
 ---
 
 ## 🏗️ Architecture
+
+```
 Internet (Attackers & Bots)
-
-│
-
-▼
-
-[AWS Internet Gateway]
-
-│
-
-▼
-
-[EC2 t3.micro - Ubuntu 26.04]
-
-┌──────────────────────────────────┐
-
-│                                  │
-
-│  🎣 Honeypot Services (Python)  │
-
-│  ├── Fake SSH    → Port 2222    │
-
-│  ├── Fake HTTP   → Port 8080    │
-
-│  └── Fake Telnet → Port 2323    │
-
-│                                  │
-
-│  📝 attacks.json (log file)     │
-
-│                                  │
-
-│  🐍 Flask API   → Port 5000     │
-
-│  ⚛️  React Dashboard → Port 3000 │
-
-└──────────────────────────────────┘
-
-│
-
-▼
-
-[Your Browser — Live Dashboard]
+         │
+         ▼
+  [AWS Internet Gateway]
+         │
+         ▼
+  [EC2 t3.micro - Ubuntu 26.04]
+  ┌──────────────────────────────────┐
+  │  🎣 Honeypot Services (Python)  │
+  │  ├── Fake SSH    → Port 2222    │
+  │  ├── Fake HTTP   → Port 8080    │
+  │  └── Fake Telnet → Port 2323    │
+  │  📝 attacks.json (log file)     │
+  │  🐍 Flask API   → Port 5000     │
+  │  ⚛️  React Dashboard → Port 3000│
+  └──────────────────────────────────┘
+         │
+         ▼
+  [Your Browser — Live Dashboard]
+```
 
 ---
 
@@ -156,7 +133,7 @@ bash start.sh
 ```
 
 ### 4. Open the dashboard
-http://3.84.187.182:3000/
+http://YOUR_EC2_IP:3000
 
 > ⚠️ **Security Note:** This honeypot intentionally opens all ports to attract attackers. Never deploy on a machine with real data or production systems.
 
